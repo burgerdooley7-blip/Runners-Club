@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runner's Club</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#0a0a0b;color:#f5f5f5;
+  font-family:Arial,sans-serif;line-height:1.6
+}
+:root{--green:#c8ff1f;--card:#16171a;--border:#2a2d32}
+header{
+  padding:18px 20px;background:#101113;
+  border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+  position:sticky;top:0;z-index:5
+}
+.logo{font-size:22px;font-weight:900}
+.logo span{color:var(--green)}
+nav a{color:#fff;text-decoration:none;margin-left:15px;font-size:14px}
+nav a:hover{color:var(--green)}
+.hero{
+  padding:65px 20px;text-align:center;
+  background:radial-gradient(circle at top right,#27300c,#0a0a0b 65%)
+}
+.hero small{color:var(--green);letter-spacing:3px}
+.hero h1{font-size:clamp(48px,12vw,95px);line-height:1;margin:20px 0;font-weight:900}
+.hero h1 span{color:var(--green)}
+.hero p{color:#aaa;max-width:600px;margin:15px auto}
+.btn{
+  display:inline-block;background:var(--green);color:#111;
+  padding:13px 22px;text-decoration:none;font-weight:bold;
+  border-radius:4px;border:none;margin-top:20px;cursor:pointer
+}
+.btn:hover{opacity:.85}
+section{padding:55px 20px;max-width:1100px;margin:auto}
+.section-title{font-size:38px;font-weight:900;margin-bottom:10px}
+.subtitle{color:#999;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:8px;padding:22px
+}
+.card h3{margin-bottom:10px;font-size:22px}
+.green{color:var(--green)}
+.big{font-size:48px;font-weight:900;color:var(--green)}
+.tag{font-size:12px;color:var(--green);letter-spacing:2px}
+hr{border:0;border-top:1px solid var(--border);margin:18px 0}
+table{width:100%;border-collapse:collapse;background:var(--card)}
+th,td{padding:14px;text-align:left;border-bottom:1px solid var(--border)}
+th{color:var(--green);font-size:13px}
+form{display:grid;gap:14px}
+input,select{
+  width:100%;padding:14px;background:#0a0a0b;
+  border:1px solid #383b40;color:white;border-radius:4px
+}
+footer{
+  text-align:center;background:#101113;border-top:1px solid var(--border);
+  padding:30px;color:#999
+}
+footer span{color:var(--green)}
+@media(max-width:600px){
+  nav a{margin-left:8px;font-size:12px}
+  header{padding:14px 12px}
+  .logo{font-size:18px}
+  .section-title{font-size:30px}
+  th,td{padding:10px 8px;font-size:13px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">RUNNER'S <span>CLUB</span></div>
+  <nav>
+    <a href="#challenges">Challenges</a>
+    <a href="#leaderboard">Ranks</a>
+    <a href="#join">Join</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <small>RUN MORE. WIN MORE.</small>
+  <h1>DON'T JUST<br><span>RUN.</span></h1>
+  <p>Challenge yourself. Push your limits. Become stronger every single day.
+     Join the running community and start your journey.</p>
+  <a href="#challenges" class="btn">EXPLORE CHALLENGES</a>
+</section>
+
+<section id="stats">
+  <div class="grid">
+    <div class="card">
+      <div class="tag">COMMUNITY</div>
+      <div class="big">100+</div>
+      <p>Potential runners</p>
+    </div>
+    <div class="card">
+      <div class="tag">YOUR GOAL</div>
+      <div class="big">5 KM</div>
+      <p>Start with your first challenge</p>
+    </div>
+    <div class="card">
+      <div class="tag">YOUR MINDSET</div>
+      <div class="big">01%</div>
+      <p>Better every day</p>
+    </div>
+  </div>
+</section>
+
+<section id="challenges">
+  <h2 class="section-title">RUNNING <span class="green">CHALLENGES</span></h2>
+  <p class="subtitle">Choose your challenge. Start moving.</p>
+
+  <div class="grid">
+    <div class="card">
+      <div class="tag">BEGINNER</div>
+      <h3>First 5K</h3>
+      <div class="big">5 KM</div>
+      <p>Complete your first 5 kilometer run.</p>
+      <hr>
+      <p>Level: Easy</p>
+      <a href="#join" class="btn">JOIN CHALLENGE</a>
+    </div>
+
+    <div class="card">
+      <div class="tag">INTERMEDIATE</div>
+      <h3>Weekend Runner</h3>
+      <div class="big">15 KM</div>
+      <p>Run a total of 15 km in a week.</p>
+      <hr>
+      <p>Level: Medium</p>
+      <a href="#join" class="btn">JOIN CHALLENGE</a>
+    </div>
+
+    <div class="card">
+      <div class="tag">ADVANCED</div>
+      <h3>Run Warrior</h3>
+      <div class="big">30 KM</div>
+      <p>Push your limits with a 30 km weekly goal.</p>
+      <hr>
+      <p>Level: Hard</p>
+      <a href="#join" class="btn">JOIN CHALLENGE</a>
+    </div>
+  </div>
+</section>
+
+<section id="leaderboard">
+  <h2 class="section-title">LEADER<span class="green">BOARD</span></h2>
+  <p class="subtitle">Demo rankings — sample data only</p>
+
+  <div class="card" style="padding:0;overflow-x:auto">
+    <table>
+      <thead>
+        <tr><th>Rank</th><th>Runner</th><th>Distance</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="green">01</td><td>Runner One</td><td>42 KM</td></tr>
+        <tr><td>02</td><td>Runner Two</td><td>35 KM</td></tr>
+        <tr><td>03</td><td>Runner Three</td><td>28 KM</td></tr>
+        <tr><td>04</td><td>You</td><td>0 KM</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="join">
+  <h2 class="section-title">JOIN THE <span class="green">CLUB</span></h2>
+  <p class="subtitle">Start your running journey today.</p>
+
+  <div class="card">
+    <form id="joinForm">
+      <input type="text" id="name" placeholder="Your full name" required>
+      <input type="email" id="email" placeholder="Your email address" required>
+      <select id="challenge" required>
+        <option value="">Select a challenge</option>
+        <option>First 5K - 5 KM</option>
+        <option>Weekend Runner - 15 KM</option>
+        <option>Run Warrior - 30 KM</option>
+      </select>
+      <button class="btn" type="submit">SUBMIT JOIN REQUEST</button>
+    </form>
+    <p id="message" class="green" style="margin-top:15px"></p>
+  </div>
+</section>
+
+<section>
+  <div class="card" style="text-align:center">
+    <h2 class="section-title">EVERY STEP <span class="green">COUNTS.</span></h2>
+    <p class="subtitle">Your competition is who you were yesterday.</p>
+    <a href="#join" class="btn">START YOUR JOURNEY</a>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">RUNNER'S <span>CLUB</span></div>
+  <p>Run more. Win more. Stay consistent.</p>
+  <p style="margin-top:12px">© 2026 Runner's Club</p>
+</footer>
+
+<script>
+document.getElementById("joinForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const name=document.getElementById("name").value;
+  const challenge=document.getElementById("challenge").value;
+  document.getElementById("message").textContent=
+    "Thanks "+name+"! Your demo request for "+challenge+" has been received.";
+  this.reset();
+});
+</script>
+
+</body>
+      </html>
